@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US"><head><!-- Created by Artisteer v4.2.0.60623 -->
+    <meta charset="utf-8">
+    <title>Home</title>
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+
+    <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="stylesheet" href="style.css" media="screen">
+    <!--[if lte IE 7]><link rel="stylesheet" href="style.ie7.css" media="screen" /><![endif]-->
+    <link rel="stylesheet" href="style.responsive.css" media="all">
+
+
+    <script src="jquery.js"></script>
+    <script src="script.js"></script>
+    <script src="script.responsive.js"></script>
+
+
+<script>jQuery(function ($) {
+    'use strict';
+    if ($.fn.slider) {
+        $(".art-slidecontainer9bce4edfb780427b89203df143143d7e").each(function () {
+            var slideContainer = $(this), tmp;
+            var inner = $(".art-slider-inner", slideContainer);
+            var helper = null;
+            
+            if ($.support.transition) {
+                helper = new BackgroundHelper();
+                helper.init("fade", "next", $(".art-slide-item", inner).first().css($.support.transition.prefix + "transition-duration"));
+                inner.children().each(function () {
+                    helper.processSlide($(this));
+                });
+
+                
+            } else if (browser.ie && browser.version <= 8) {
+                var slidesInfo = {
+".art-slide9bce4edfb780427b89203df143143d7e0": {
+    "bgimage" : "url('images/slide9bce4edfb780427b89203df143143d7e0.png')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+},
+".art-slide9bce4edfb780427b89203df143143d7e1": {
+    "bgimage" : "url('images/slide9bce4edfb780427b89203df143143d7e1.png')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+}
+                };
+                $.each(slidesInfo, function(selector, info) {
+                    processElementMultiplyBg(slideContainer.find(selector), info);
+                });
+            }
+
+            inner.children().eq(0).addClass("active");
+            slideContainer.slider({
+                pause: 2600,
+                speed: 600,
+                repeat: true,
+                animation: "fade",
+                direction: "next",
+                navigator: slideContainer.siblings(".art-slidenavigator9bce4edfb780427b89203df143143d7e"),
+                helper: helper
+            });
+            
+                        
+        });
+    }
+});
+</script><style>.art-content .art-postcontent-0 .layout-item-0 { margin-top: 10px;  }
+.art-content .art-postcontent-0 .layout-item-1 { padding-right: 10px;padding-left: 10px;  }
+.art-content .art-postcontent-0 .layout-item-2 { margin-top: 10px;margin-bottom: 10px;margin-left: 10px;  }
+.art-content .art-postcontent-0 .layout-item-3 { border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-top-color:#E3E3E3;border-right-color:#E3E3E3;border-bottom-color:#E3E3E3;border-left-color:#E3E3E3; padding-right: 10px;padding-left: 10px;  }
+.ie7 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+.ie6 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+
+.art-slidecontainer9bce4edfb780427b89203df143143d7e {
+    position: relative;
+        width: 244px;
+    height: 179px;
+        }
+
+.default-responsive .art-header .art-slidecontainer9bce4edfb780427b89203df143143d7e,
+.responsive .art-header .art-slidecontainer9bce4edfb780427b89203df143143d7e
+{
+  position: absolute !important;
+}
+
+.responsive .art-pageslider .art-slidecontainer9bce4edfb780427b89203df143143d7e {
+  position: absolute !important;
+}
+
+.art-slidecontainer9bce4edfb780427b89203df143143d7e .art-slide-item
+{
+
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    transform: rotate(0);
+}
+
+
+
+.art-slidecontainer9bce4edfb780427b89203df143143d7e .art-slide-item {
+    -webkit-transition: 600ms ease-in-out opacity;
+    -moz-transition: 600ms ease-in-out opacity;
+    -ms-transition: 600ms ease-in-out opacity;
+    -o-transition: 600ms ease-in-out opacity;
+    transition: 600ms ease-in-out opacity;
+    position: absolute !important;
+    display: none;
+	left: 0;
+	top: 0;
+	opacity: 0;
+    width:  100%;
+    height: 100%;
+}
+
+.art-slidecontainer9bce4edfb780427b89203df143143d7e .active, .art-slidecontainer9bce4edfb780427b89203df143143d7e .next, .art-slidecontainer9bce4edfb780427b89203df143143d7e .prev {
+    display: block;
+}
+
+.art-slidecontainer9bce4edfb780427b89203df143143d7e .active {
+    opacity: 1;
+}
+
+.art-slidecontainer9bce4edfb780427b89203df143143d7e .next, .art-slidecontainer9bce4edfb780427b89203df143143d7e .prev {
+    width: 100%;
+}
+
+.art-slidecontainer9bce4edfb780427b89203df143143d7e .next.forward, .art-slidecontainer9bce4edfb780427b89203df143143d7e .prev.back {
+    opacity: 1;
+}
+
+.art-slidecontainer9bce4edfb780427b89203df143143d7e .active.forward {
+    opacity: 0;
+}
+
+.art-slidecontainer9bce4edfb780427b89203df143143d7e .active.back {
+    opacity: 0;
+}
+
+
+.art-slide9bce4edfb780427b89203df143143d7e0 {
+    background-image:  url('images/slide9bce4edfb780427b89203df143143d7e0.png');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slide9bce4edfb780427b89203df143143d7e0 {
+    background-image:  url('images/slide9bce4edfb780427b89203df143143d7e0.png');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slide9bce4edfb780427b89203df143143d7e0 {
+    background-image:  url('images/slide9bce4edfb780427b89203df143143d7e0.png');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slide9bce4edfb780427b89203df143143d7e0 {
+    background-image: url('images/slide9bce4edfb780427b89203df143143d7e0.png');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slide9bce4edfb780427b89203df143143d7e0 {
+    background-image: url('images/slide9bce4edfb780427b89203df143143d7e0.png');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}.art-slide9bce4edfb780427b89203df143143d7e1 {
+    background-image:  url('images/slide9bce4edfb780427b89203df143143d7e1.png');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slide9bce4edfb780427b89203df143143d7e1 {
+    background-image:  url('images/slide9bce4edfb780427b89203df143143d7e1.png');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slide9bce4edfb780427b89203df143143d7e1 {
+    background-image:  url('images/slide9bce4edfb780427b89203df143143d7e1.png');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slide9bce4edfb780427b89203df143143d7e1 {
+    background-image: url('images/slide9bce4edfb780427b89203df143143d7e1.png');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slide9bce4edfb780427b89203df143143d7e1 {
+    background-image: url('images/slide9bce4edfb780427b89203df143143d7e1.png');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.art-slidenavigator9bce4edfb780427b89203df143143d7e {
+  display: inline-block;
+  position: absolute;
+  direction: ltr !important;
+  top: 155px;
+  left: 81.97%;
+  z-index: 101;
+  line-height: 0 !important;
+  -webkit-background-origin: border !important;
+  -moz-background-origin: border !important;
+  background-origin: border-box !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+    white-space: nowrap;
+    }
+.art-slidenavigator9bce4edfb780427b89203df143143d7e
+{
+background: #8C8C8C;background: -webkit-linear-gradient(top, rgba(178, 178, 178, 0.6) 0, rgba(128, 128, 128, 0.6) 67%, rgba(102, 102, 102, 0.6) 100%) no-repeat;background: -moz-linear-gradient(top, rgba(178, 178, 178, 0.6) 0, rgba(128, 128, 128, 0.6) 67%, rgba(102, 102, 102, 0.6) 100%) no-repeat;background: -o-linear-gradient(top, rgba(178, 178, 178, 0.6) 0, rgba(128, 128, 128, 0.6) 67%, rgba(102, 102, 102, 0.6) 100%) no-repeat;background: -ms-linear-gradient(top, rgba(178, 178, 178, 0.6) 0, rgba(128, 128, 128, 0.6) 67%, rgba(102, 102, 102, 0.6) 100%) no-repeat;-svg-background: linear-gradient(top, rgba(178, 178, 178, 0.6) 0, rgba(128, 128, 128, 0.6) 67%, rgba(102, 102, 102, 0.6) 100%) no-repeat;background: linear-gradient(to bottom, rgba(178, 178, 178, 0.6) 0, rgba(128, 128, 128, 0.6) 67%, rgba(102, 102, 102, 0.6) 100%) no-repeat;
+-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;
+
+
+padding:7px;
+
+
+
+
+
+}
+.art-slidenavigator9bce4edfb780427b89203df143143d7e > a
+{
+background: #4F4F4F;background: #4F4F4F;background: #4F4F4F;background: #4F4F4F;background: #4F4F4F;-svg-background: #4F4F4F;background: #4F4F4F;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+.art-slidenavigator9bce4edfb780427b89203df143143d7e > a.active
+{
+background: #FF4242;background: #FF4242;background: #FF4242;background: #FF4242;background: #FF4242;-svg-background: #FF4242;background: #FF4242;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+.art-slidenavigator9bce4edfb780427b89203df143143d7e > a:hover
+{
+background: #BD0A13;background: #BD0A13;background: #BD0A13;background: #BD0A13;background: #BD0A13;-svg-background: #BD0A13;background: #BD0A13;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+
+</style></head>
+<body>
+<div id="art-main">
+    <div id="art-header-bg">
+            </div>
+    <div id="art-hmenu-bg" class="art-bar art-nav">
+    </div>
+    <div class="art-sheet clearfix">
+<nav class="art-nav">
+    <div class="art-nav-inner">
+    <ul class="art-hmenu"><li><a href="start.html" class="active">Start</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="biogram.html">Biogram</a></li><li><a href="kontakt.html">Kontakt</a></li></ul> 
+        </div>
+    </nav>
+<header class="art-header">
+
+    <div class="art-shapes">
+        
+            </div>
+
+<h1 class="art-headline">
+    <a href="#">Stona osobista</a>
+</h1>
+<h2 class="art-slogan">Wiesława Glińskiego</h2>
+
+
+
+
+
+                
+                    
+</header>
+<div class="art-layout-wrapper">
+                <div class="art-content-layout">
+                    <div class="art-content-layout-row">
+                        <div class="art-layout-cell art-content"><article class="art-post art-article">
+                                
+                                                
+                <div class="art-postcontent art-postcontent-0 clearfix"><div class="art-content-layout-wrapper layout-item-0">
+<div class="art-content-layout">
+    <div class="art-content-layout-row">
+    <div class="art-layout-cell layout-item-1" style="width: 50%" >
+        <p></p><div id="9bce4edfb780427b89203df143143d7e" style="position: relative; display: inline-block; z-index: 0; margin: 0px;  border-width: 0px;  float: left;" class="art-collage">
+<div class="art-slider art-slidecontainer9bce4edfb780427b89203df143143d7e" data-width="244" data-height="179">
+    <div class="art-slider-inner">
+<div class="art-slide-item art-slide9bce4edfb780427b89203df143143d7e0" >
+
+
+</div>
+<div class="art-slide-item art-slide9bce4edfb780427b89203df143143d7e1" >
+
+
+</div>
+
+    </div>
+</div>
+<div class="art-slidenavigator art-slidenavigator9bce4edfb780427b89203df143143d7e" data-left="1" data-top="1">
+<a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a>
+</div>
+
+
+
+    </div>
+
+        
+         
+        <p>
+        </p><p></p><p><span style="font-weight: bold;"><br></span></p>
+    </div><div class="art-layout-cell layout-item-1" style="width: 50%" >
+        <p><span style="font-weight: bold;">Prowadzę działąlność gospodarczą....</span></p><p>Przez kilka lat pracowałem z komputerowymi programami do obslugi bibliotek i ośrodków informacji. Obecnie staram sie połączyć doświadczenie informatyczne uaktualnić wiedzę oraz z umiejętnościami z dziedziny godpodarki nieruchomościami....</p><p><br></p>
+    </div>
+    </div>
+</div>
+</div>
+<div class="art-content-layout-wrapper layout-item-2">
+<div class="art-content-layout">
+    <div class="art-content-layout-row">
+    <div class="art-layout-cell layout-item-3" style="width: 100%" >
+        <blockquote>Trudne problemy pozostawione same sobie, staną się jeszcze trudniejsze.</blockquote>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+                                
+                
+
+</article></div>
+                    </div>
+                </div>
+            </div>
+    </div>
+<footer class="art-footer">
+  <div class="art-footer-inner">
+<div style="position:relative;display:inline-block;padding-left:40px;padding-right:40px"><p><br><br></p></div>
+    <p class="art-page-footer">
+        <span id="art-footnote-links"><a href="http://www.artisteer.com/" target="_blank">Web Template</a> created with Artisteer.</span>
+    </p>
+  </div>
+</footer>
+
+</div>
+
+
+</body></html>
